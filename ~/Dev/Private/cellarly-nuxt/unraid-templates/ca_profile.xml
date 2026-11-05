@@ -1,0 +1,10 @@
+<CommunityApplications>
+  <Profile>
+    Unraid templates for the self-hosted apps I build at **coderoftime**. Every app is open source and runs in a single container with its data in your appdata folder.
+
+    Each app's template links to its own project page and issue tracker for support.
+  </Profile>
+  <WebPage>https://coderoftime.dev</WebPage>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://buymeacoffee.com/coderoftime</DonateLink>
+</CommunityApplications>
