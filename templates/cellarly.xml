@@ -15,7 +15,7 @@ Search a wine catalog or snap a photo of the label, track what you paid and what
 Everything is stored in one SQLite file in the appdata folder, backed up daily and before every upgrade, and downloadable and restorable from the Admin page. Google Gemini (optional API key) powers label recognition, enrichment and the price and critics lookup.</Overview>
   <Category>Other: Tools:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/REPLACE-WITH-GITHUB-USER/unraid-templates/main/templates/cellarly.xml</TemplateURL>
+  <TemplateURL>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/templates/cellarly.xml</TemplateURL>
   <Icon>https://gitlab.com/coderoftime/cellarly/-/raw/main/public/apple-touch-icon.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
@@ -25,6 +25,12 @@ Everything is stored in one SQLite file in the appdata folder, backed up daily a
   <Requires/>
   <License>AGPL-3.0</License>
   <Beta>true</Beta>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/list-view.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/rack-3d.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/wine-detail.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/stats.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/history.png</Screenshot>
+  <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/mobile-light.png</Screenshot>
   <DefaultTagDescription>Newest release, pre-releases included</DefaultTagDescription>
   <!-- Enable once a stable release (v1.0.0) has pushed the latest tag.
   <Branch>
