@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Cellarly</Name>
+  <Repository>registry.gitlab.com/coderoftime/cellarly:beta</Repository>
+  <Registry>https://gitlab.com/coderoftime/cellarly/container_registry</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Project>https://gitlab.com/coderoftime/cellarly</Project>
+  <Overview>Self-hosted wine cellar manager. Every bottle lives at an exact row and position in a rack you can spin around in 3D, on a server that is entirely yours.&#xD;
+&#xD;
+Search a wine catalog or snap a photo of the label, track what you paid and what it is worth, rate what you drink and watch the drink-window countdown. Share one server with your household, in German or English.&#xD;
+&#xD;
+Everything is stored in one SQLite file in the appdata folder, backed up daily and before every upgrade, and downloadable and restorable from the Admin page. Google Gemini (optional API key) powers label recognition, enrichment and the price and critics lookup.</Overview>
+  <Category>Other: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/REPLACE-WITH-GITHUB-USER/unraid-templates/main/templates/cellarly.xml</TemplateURL>
+  <Icon>https://gitlab.com/coderoftime/cellarly/-/raw/main/public/apple-touch-icon.png</Icon>
+  <ExtraParams>--user 99:100</ExtraParams>
+  <PostArgs/>
+  <CPUset/>
+  <DonateText>Buy me a coffee</DonateText>
+  <DonateLink>https://buymeacoffee.com/coderoftime</DonateLink>
+  <Requires/>
+  <License>AGPL-3.0</License>
+  <Beta>true</Beta>
+  <DefaultTagDescription>Newest release, pre-releases included</DefaultTagDescription>
+  <!-- Enable once a stable release (v1.0.0) has pushed the latest tag.
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Newest stable release</TagDescription>
+  </Branch>
+  -->
+  <Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Port the web interface is served on." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Data" Target="/app/data" Default="/mnt/user/appdata/cellarly" Mode="rw" Description="The SQLite database and its automatic backups. This is the only state the app has." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/cellarly</Config>
+  <Config Name="Session secret" Target="NUXT_SESSION_PASSWORD" Default="" Mode="" Description="Signs and encrypts the session cookie. At least 32 random characters, e.g. from `openssl rand -base64 32`. Keep it stable: changing it signs everyone out." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin password" Target="NUXT_ADMIN_PASSWORD" Default="" Mode="" Description="Password of the admin account. Needed once, when the first start creates it; changing it later has no effect." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Admin email" Target="NUXT_ADMIN_EMAIL" Default="admin@localhost" Mode="" Description="Email the admin signs in with. Read on the first start only." Type="Variable" Display="always" Required="false" Mask="false">admin@localhost</Config>
+  <Config Name="Secure cookie" Target="NUXT_SESSION_COOKIE_SECURE" Default="false" Mode="" Description="Leave at false while you open the app over plain http://. Browsers drop a secure cookie over HTTP and login then silently fails. Set to true once the app is reached over HTTPS." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Gemini API key" Target="NUXT_GEMINI_API_KEY" Default="" Mode="" Description="Optional. Google Gemini key for label recognition, enrichment and the price and critics lookup (the lookup needs a paid key)." Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Daily backups kept" Target="NUXT_BACKUP_KEEP" Default="14" Mode="" Description="How many daily backups of the database to keep in the backups folder. 0 switches them off. Backups taken before an upgrade or a restore are never deleted." Type="Variable" Display="advanced" Required="false" Mask="false">14</Config>
+  <Config Name="Trusted proxies" Target="NUXT_TRUSTED_PROXIES" Default="" Mode="" Description="Reverse proxies whose X-Forwarded-For is believed, comma-separated addresses or ranges. For Nginx Proxy Manager on the default bridge: 172.17.0.0/16." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP host" Target="NUXT_SMTP_HOST" Default="" Mode="" Description="Optional. Together with SMTP from and SMTP public URL it switches on password-reset mails; without them an admin issues a temporary password instead." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP from" Target="NUXT_SMTP_FROM" Default="" Mode="" Description="Sender address of the password-reset mail." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP public URL" Target="NUXT_SMTP_PUBLIC_URL" Default="" Mode="" Description="Address the reset link points to, e.g. https://cellarly.example.com" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP port" Target="NUXT_SMTP_PORT" Default="587" Mode="" Description="587 for STARTTLS, 465 with SMTP secure on." Type="Variable" Display="advanced" Required="false" Mask="false">587</Config>
+  <Config Name="SMTP secure" Target="NUXT_SMTP_SECURE" Default="" Mode="" Description="true means TLS from the first byte (port 465). Leave empty for STARTTLS." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP user" Target="NUXT_SMTP_USER" Default="" Mode="" Description="Only for relays that ask for a login." Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SMTP password" Target="NUXT_SMTP_PASSWORD" Default="" Mode="" Description="Only for relays that ask for a login." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+</Container>
