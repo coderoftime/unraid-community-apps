@@ -7,10 +7,13 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/201181-support-cellarly/</Support>
   <Project>https://gitlab.com/coderoftime/cellarly</Project>
   <Overview>Self-hosted wine cellar manager. Every bottle lives at an exact row and position in a rack you can spin around in 3D, on a server that is entirely yours.&#xD;
 &#xD;
 Search a wine catalog or snap a photo of the label, track what you paid and what it is worth, rate what you drink and watch the drink-window countdown. Share one server with your household, in German or English.&#xD;
+&#xD;
+Sign in as the admin with the email and password you set below. Everyone else registers at /register, and you approve them in the Admin page. No mail server is needed.&#xD;
 &#xD;
 Everything is stored in one SQLite file in the appdata folder, backed up daily and before every upgrade, and downloadable and restorable from the Admin page. Google Gemini (optional API key) powers label recognition, enrichment and the price and critics lookup.</Overview>
   <Category>Other: Tools:</Category>
@@ -25,6 +28,21 @@ Everything is stored in one SQLite file in the appdata folder, backed up daily a
   <Requires/>
   <License>AGPL-3.0</License>
   <Beta>true</Beta>
+  <Date>2026-11-05</Date>
+  <Changes>1.0.0-beta.6 (2026-11-05)&#xD;
+- Backups on the Admin page: download the database, or restore one.&#xD;
+- A daily backup into the data folder, keeping the newest 14.&#xD;
+- Export your bottles, wishlist, ratings and history as CSV from Settings.&#xD;
+- Readable label on the red confirm buttons.&#xD;
+&#xD;
+1.0.0-beta.5 (2026-11-04)&#xD;
+- "Look up price &amp; ratings" now answers in 10 to 25 seconds instead of timing out.&#xD;
+&#xD;
+1.0.0-beta.4 (2026-11-04)&#xD;
+- Look up a wine's market price and critic scores (needs a paid Gemini key).&#xD;
+- An estimated cellar worth in Statistics.&#xD;
+&#xD;
+Full history: https://gitlab.com/coderoftime/cellarly/-/blob/main/CHANGELOG.md</Changes>
   <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/list-view.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/rack-3d.png</Screenshot>
   <Screenshot>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/screenshots/cellarly/wine-detail.png</Screenshot>
