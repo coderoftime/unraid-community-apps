@@ -19,7 +19,7 @@ Everything is stored in one SQLite file in the appdata folder, backed up daily a
   <Category>Other: Tools:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/templates/cellarly.xml</TemplateURL>
-  <Icon>https://gitlab.com/coderoftime/cellarly/-/raw/main/public/apple-touch-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/coderoftime/unraid-community-apps/main/icons/cellarly.png</Icon>
   <ExtraParams>--user 99:100</ExtraParams>
   <PostArgs/>
   <CPUset/>
