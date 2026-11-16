@@ -32,8 +32,17 @@ Free software under the AGPL-3.0. Source code: https://gitlab.com/coderoftime/ce
   <Requires/>
   <License>AGPL-3.0</License>
   <Beta>true</Beta>
-  <Date>2026-11-10</Date>
-  <Changes>1.0.0-beta.7 (2026-11-10)&#xD;
+  <Date>2026-11-16</Date>
+  <Changes>1.0.0-beta.8 (2026-11-16)&#xD;
+- The photo of a label you scan is kept and shows on the wine. Add, replace or remove one later on the wine's detail sheet. Only you see it, and it is kept in the database, so backups hold it.&#xD;
+- Take bottles out for now, for a party, then put back what is left or book it out as drunk. They keep their place meanwhile, and a "Taken out" chip finds them.&#xD;
+- See when a vintage's bottles were bought and what they cost, and correct a purchase's date and price.&#xD;
+- Moving bottles no longer mixes up their prices and purchase dates, and the history shows each entry under the day it happened where you are.&#xD;
+- Shorter notes on what goes to Google Gemini; what to do when it can't answer is in Cellarly's docs.&#xD;
+- The image is built again only when Debian or Node.js bring fixes, so Unraid no longer offers updates that change nothing.&#xD;
+- Upgrading: the first start migrates the database, after a backup in the backups folder of the data path. To go back to 1.0.0-beta.7, restore that backup.&#xD;
+&#xD;
+1.0.0-beta.7 (2026-11-10)&#xD;
 - A sign-in ends after 30 days without use (Session idle days), and everyone signs in once more after this upgrade.&#xD;
 - Registration open set to false takes no more registrations. The admin's account button shows how many are waiting.&#xD;
 - Type a drinking window by hand. "Enhance with AI" only fills empty fields, which Save keeps and Cancel drops.&#xD;
