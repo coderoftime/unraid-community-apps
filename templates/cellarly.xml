@@ -33,7 +33,14 @@ Free software under the AGPL-3.0. Source code: https://gitlab.com/coderoftime/ce
   <License>AGPL-3.0</License>
   <Beta>true</Beta>
   <Date>2026-11-16</Date>
-  <Changes>1.0.0-beta.8 (2026-11-16)&#xD;
+  <Changes>1.0.0-beta.9 (2026-11-16)&#xD;
+- Security: a password-reset link stops working once the password changes or the account is deactivated, a deactivated account stays signed out, and the demo account can't be made an admin.&#xD;
+- Limits per account, far above any real cellar, so one account or the public demo can't slow Cellarly down for everyone. Going past one says which.&#xD;
+- A bottle tapped in the rack opens on its own vintage, and in 3D a compartment with several wines lists them. Booking out of a cabinet takes the bottle from the compartment it came from.&#xD;
+- A page whose session has ended goes to the sign-in page instead of asking to try again.&#xD;
+- Upgrading: new database files are readable by their owner alone. For a database in your appdata folder from an earlier release, stop the container and run chmod 600 on cellarly.db* in that folder.&#xD;
+&#xD;
+1.0.0-beta.8 (2026-11-16)&#xD;
 - The photo of a label you scan is kept and shows on the wine. Add, replace or remove one later on the wine's detail sheet. Only you see it, and it is kept in the database, so backups hold it.&#xD;
 - Take bottles out for now, for a party, then put back what is left or book it out as drunk. They keep their place meanwhile, and a "Taken out" chip finds them.&#xD;
 - See when a vintage's bottles were bought and what they cost, and correct a purchase's date and price.&#xD;
